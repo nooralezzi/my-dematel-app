@@ -304,7 +304,7 @@ export default function App() {
               <tbody>
                 {output.ranking.map((item, i) => (
                   <tr key={i}>
-                    <td className="border px-2">{item.criterion}</td>
+                    <td className="border px-2">{item.alternative}</td>
                     <td className="border px-2">{item.prominence}</td>
                     <td className="border px-2">{item.relation}</td>
                     <td className="border px-2">{item.type}</td>
