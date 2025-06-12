@@ -173,8 +173,15 @@ export default function App() {
       type: relation[i] >= 0 ? "Cause" : "Effect",
     })).sort((a, b) => b.prominence - a.prominence);
 
-    setOutput({ crispMatrix, normalizedMatrix, totalRelationMatrix, prominence, relation, ranking });
-    setError("");
+    setOutput({
+      crispMatrix: crispMatrix.map(row => row.map(val => val.toNumber())),
+      normalizedMatrix: normalizedMatrix.map(row => row.map(val => val.toNumber())),
+      totalRelationMatrix: totalRelationMatrix.map(row => row.map(val => val)), // already rounded
+      prominence,
+      relation,
+      ranking
+    });
+        setError("");
   };
 
 
